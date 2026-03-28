@@ -21,6 +21,17 @@
   status = 200
 
 [[redirects]]
+  from = "/admin/notifications"
+  to = "/.netlify/functions/server/admin/notifications"
+  status = 200
+
+[[redirects]]
+  from = "/admin/notifications/*"
+  to = "/.netlify/functions/server/admin/notifications/:splat"
+  status = 200
+
+
+[[redirects]]
   from = "/products"
   to = "/.netlify/functions/server/products"
   status = 200
