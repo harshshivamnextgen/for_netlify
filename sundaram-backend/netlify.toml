@@ -1,7 +1,7 @@
 [build]
   # Build the frontend from the sibling directory and copy it to our static folder
   # This command runs in the sundaram-backend directory
-  command = "cd ../sundaram-new/my-app && npm install && npm run build && cd ../../sundaram-backend && cp -R ../sundaram-new/my-app/dist/* public/"
+  command = "cd ../sundaram-new/my-app && npm install && npm run build && cd ../../sundaram-backend &&  mkdir -p public && cp -R ../sundaram-new/my-app/dist/* public/"
   publish = "public"
   functions = "netlify/functions"
 
