@@ -12,5 +12,6 @@ module.exports.handler = async (event, context) => {
     // Clean up paths for Express routing within Netlify Functions
     // The function is at /.netlify/functions/server
     // We want to handle routes like /products, /categories, etc.
+    event.path = event.path.replace(/\.netlify\/functions\/server/, '');
     return await handler(event, context);
 };
